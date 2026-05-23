@@ -1,0 +1,11 @@
+let x=16;
+
+fn test(x){
+  if(x<100){
+    x=x+2;
+    return test(x);
+  }
+  if(x>=100){
+    return x;
+  }
+}

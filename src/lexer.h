@@ -28,14 +28,12 @@ enum TokenType {
   IDENTIFIER, INT, FLOAT, STRING,
 
   // Keywords
-  TRUE, FALSE, IF, LET, FN,
+  TRUE, FALSE, IF, ELSE, LET, FN,
 
   NO_TYPE, // What the hell are you doing?
 
   END_OF_FILE
 };
-
-// make an array of strings that match each value of the TokenType enum for outputting purposes
 
 struct Token {
   TokenType type = NO_TYPE;
@@ -45,6 +43,8 @@ struct Token {
 };
 
 std :: vector<char> readText(std :: string filename);
+
+std :: vector<Token> completeTokens (std :: vector<Token> toks);
 
 std :: vector<Token> getIncompleteTokens (std :: vector<char> text);
 
